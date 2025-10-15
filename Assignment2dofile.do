@@ -40,6 +40,10 @@ by island, sort : summarize bill_depth_mm flipper_length_mm body_mass_g year
 
 by sex, sort : summarize bill_depth_mm flipper_length_mm body_mass_g year
 
+//Additional analysis for step 3 
+
+mean bill_depth_mm flipper_length_mm body_mass_g
+
 //Close the log 
 
 log close
