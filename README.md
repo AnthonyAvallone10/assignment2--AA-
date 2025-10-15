@@ -5,7 +5,7 @@
 In my .do file, I 
 
 	- captured the log
-	- imported the penguins CVS file 
+	- imported the penguins CSV file 
 	- cleaned the data set restringing variables and replacing missing values 
 	- Ran three descriptive statistics summarizing main data of the penguins for species, 	
 	sex and island
