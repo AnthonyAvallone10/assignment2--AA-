@@ -1,0 +1,159 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\aavallone\Downloads\penguin_output.log
+  log type:  text
+ opened on:  15 Oct 2025, 08:45:50
+
+. 
+end of do-file
+
+. summarize year
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+        year |        333    2008.042    .8129439       2007       2009
+
+. summarize flipper_length_mm
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+flipper_le~m |          0
+
+. do "C:\Users\LOCAL_~1\Temp\STD3afc_000005.tmp"
+
+. destring bill_depth_mm, bill_length_mm, flipper_length_mm, body_mass_g, replac
+> e
+invalid 'flipper_length_mm' 
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\LOCAL_~1\Temp\STD3afc_000006.tmp"
+
+. destring bill_depth_mm, replace 
+bill_depth_mm: all characters numeric; replaced as double
+
+. 
+end of do-file
+
+. do "C:\Users\LOCAL_~1\Temp\STD3afc_000007.tmp"
+
+. destring flipper_length_mm, replace
+flipper_length_mm: all characters numeric; replaced as int
+
+. 
+. destring body_mass_g, replace 
+body_mass_g: all characters numeric; replaced as int
+
+. 
+end of do-file
+
+. by species, sort : summarize bill_depth_mm flipper_length_mm body_mass_g year
+
+--------------------------------------------------------------------------------
+-> species = Adelie
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |        146    18.34726    1.219338       15.5       21.5
+flipper_le~m |        146    190.1027    6.521825        172        210
+ body_mass_g |        146    3706.164    458.6201       2850       4775
+        year |        146    2008.055    .8118164       2007       2009
+
+--------------------------------------------------------------------------------
+-> species = Chinstrap
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |         68    18.42059    1.135395       16.4       20.8
+flipper_le~m |         68    195.8235    7.131894        178        212
+ body_mass_g |         68    3733.088    384.3351       2700       4800
+        year |         68    2007.971    .8633601       2007       2009
+
+--------------------------------------------------------------------------------
+-> species = Gentoo
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |        119    14.99664     .985998       13.1       17.3
+flipper_le~m |        119    217.2353    6.585431        203        231
+ body_mass_g |        119    5092.437    501.4762       3950       6300
+        year |        119    2008.067    .7890253       2007       2009
+
+
+. do "C:\Users\LOCAL_~1\Temp\STD3afc_000008.tmp"
+
+. by island, sort : summarize bill_depth_mm flipper_length_mm body_mass_g year
+
+--------------------------------------------------------------------------------
+-> island = Biscoe
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |        163    15.90736    1.827653       13.1       21.1
+flipper_le~m |        163    209.5583    14.28247        172        231
+ body_mass_g |        163    4719.172    790.8601       2850       6300
+        year |        163    2008.086    .7809362       2007       2009
+
+--------------------------------------------------------------------------------
+-> island = Dream
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |        123    18.33984    1.136629       15.5       21.2
+flipper_le~m |        123     193.187    7.428732        178        212
+ body_mass_g |        123    3718.902    412.9356       2700       4800
+        year |        123    2007.992    .8540735       2007       2009
+
+--------------------------------------------------------------------------------
+-> island = Torgersen
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |         47    18.45106    1.346472       15.9       21.5
+flipper_le~m |         47    191.5319    6.220062        176        210
+ body_mass_g |         47    3708.511    451.8464       2900       4700
+        year |         47    2008.021    .8206403       2007       2009
+
+
+. 
+end of do-file
+
+. do "C:\Users\LOCAL_~1\Temp\STD3afc_000009.tmp"
+
+. by sex, sort : summarize bill_depth_mm flipper_length_mm body_mass_g year
+
+--------------------------------------------------------------------------------
+-> sex = female
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |        165    16.42545    1.795681       13.1       20.7
+flipper_le~m |        165    197.3636    12.50078        172        222
+ body_mass_g |        165    3862.273     666.172       2700       5200
+        year |        165    2008.042    .8141396       2007       2009
+
+--------------------------------------------------------------------------------
+-> sex = male
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_depth~m |        168    17.89107    1.863351       14.1       21.5
+flipper_le~m |        168     204.506    14.54788        178        231
+ body_mass_g |        168    4545.685    787.6289       3250       6300
+        year |        168    2008.042    .8142015       2007       2009
+
+
+. 
+end of do-file
+
+. do "C:\Users\LOCAL_~1\Temp\STD3afc_00000a.tmp"
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\aavallone\Downloads\penguin_output.log
+  log type:  text
+ closed on:  15 Oct 2025, 09:01:22
+--------------------------------------------------------------------------------
