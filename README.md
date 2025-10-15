@@ -3,6 +3,7 @@
 ## Penguin Data Analysis 
 
 In my .do file, I 
+
 	- captured the log
 	- imported the penguins CVS file 
 	- cleaned the data set restringing variables and replacing missing values 
